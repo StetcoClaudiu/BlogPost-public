@@ -1,0 +1,35 @@
+.container-create-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-create-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  font-size: 5vmin;
+  margin-top: 3vmin;
+  font-family: -apple-system, BlinkMacSystemFont;
+}
+
+.container-title-input {
+  width: 40vw;
+  margin-top: 3vmin;
+  display: flex;
+  font-size: 3vmin;
+}
+
+.container-content-input {
+  width: 80vw;
+  margin-top: 3vmin;
+  height: 60vh;
+}
+
+.container-post-button {
+  height: 6vh;
+  width: 10vw;
+  margin-top: 3vmin;
+}

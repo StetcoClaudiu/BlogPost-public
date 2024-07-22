@@ -1,0 +1,12 @@
+.container-my-menu {
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: white;
+  height: 5.5vh;
+}
+
+.container-list-posts {
+  overflow-y: scroll;
+  height: 94.5vh;
+}

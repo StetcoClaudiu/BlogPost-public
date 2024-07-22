@@ -1,0 +1,31 @@
+.menu-left {
+  position: fixed;
+  height: 50px;
+  width: 100vw;
+  top: 0;
+  overflow-y: hidden;
+  z-index: 1;
+}
+
+.title-menu {
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  right: 50%;
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont;
+  z-index: 2;
+}
+
+.menu-right {
+  position: fixed;
+  right: 1vw;
+  top: 8px;
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}

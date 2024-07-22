@@ -1,0 +1,23 @@
+.container-details {
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+
+.title-details {
+  font-family: -apple-system, BlinkMacSystemFont;
+  height: 10vh;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  padding: 7vmin;
+
+  font-size: 5vmin;
+}
+
+.content-details {
+  height: 80vh;
+  width: 100vw;
+  padding: 5vmin;
+  padding-top: 0vmin;
+}
