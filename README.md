@@ -25,29 +25,44 @@ To set up and run the application, follow these steps:
 
 ### Prerequisites
 Docker
+
 Docker Compose
-Setup
+
+### Setup
+
 Build the Docker Containers
 
 ```bash
-Copy code
 docker-compose build
-Start the Application
 ```
-bash
-Copy code
+Start the Application
+
+```bash
 docker-compose up
-Accessing the Application
+```
+
+### Accessing the Application
+
 Frontend: http://127.0.0.1:3000/
+
 Backend: http://127.0.0.1:8000/
-Features
+
+### Features
+
 User Authentication: Handles user login and registration.
+
 Blog Management: Allows users to view, create, update, and delete blog posts.
+
 Real-Time Updates: Uses WebSockets to notify clients of changes to blog posts.
-WebSocket and Django Signals
+
+### WebSocket and Django Signals
+
 The application utilizes WebSocket connections and Django Signals for real-time updates:
 
 Actions:
+
 Delete: Notifies clients about the deletion of a blog post, including the ID of the deleted post.
+
 Update: Sends updates for blog posts, including new or updated data.
-Screenshots
+
+##Screenshots
