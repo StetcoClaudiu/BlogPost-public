@@ -39,7 +39,7 @@ const MyMenu: React.FC = () => {
 
   const onClick: MenuProps["onClick"] = (e) => {
     setCurrent(e.key);
-    if (e.key == "my_posts") dispatch(toggleOptions(true));
+    if (e.key === "my_posts") dispatch(toggleOptions(true));
     else dispatch(toggleOptions(false));
   };
 

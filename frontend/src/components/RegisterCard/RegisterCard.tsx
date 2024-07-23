@@ -2,10 +2,9 @@ import React, { FC, useState } from "react";
 import "./RegisterCard.css";
 import { Input, Button, message } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleRegister } from "../../redux/loginRegisterSlice";
 import axios from "axios";
-import { RootState } from "../../redux/store";
 
 const RegisterCard: React.FC = () => {
   const dispatch = useDispatch();
@@ -39,9 +38,18 @@ const RegisterCard: React.FC = () => {
         data
       );
       handleClick();
-      message.success("Register successfully");
-    } catch (error) {
-      console.error(error);
+      message.success("Registered successfully");
+    } catch (error: any) {
+      if (error.response && error.response.status === 400) {
+        const errorMessages = error.response.data;
+        for (const key in errorMessages) {
+          if (errorMessages.hasOwnProperty(key)) {
+            message.error(errorMessages[key]);
+          }
+        }
+      } else {
+        message.error("An unexpected error occurred");
+      }
     }
   };
 
@@ -59,27 +67,28 @@ const RegisterCard: React.FC = () => {
           size="large"
           className="register-input"
           onChange={(e) => setUsername(e.target.value)}
-        ></Input>
+        />
 
         <Input
           placeholder="First Name"
           size="large"
           className="register-input"
           onChange={(e) => setFirstName(e.target.value)}
-        ></Input>
+        />
 
         <Input
           placeholder="Last Name"
           size="large"
           className="register-input"
           onChange={(e) => setLastName(e.target.value)}
-        ></Input>
+        />
+
         <Input
           placeholder="Email"
           size="large"
           className="register-input"
           onChange={(e) => setEmail(e.target.value)}
-        ></Input>
+        />
 
         <Input
           placeholder="Password"
@@ -87,7 +96,7 @@ const RegisterCard: React.FC = () => {
           type="password"
           className="register-input"
           onChange={(e) => setPassword(e.target.value)}
-        ></Input>
+        />
 
         <Input
           placeholder="Confirm Password"
@@ -95,7 +104,7 @@ const RegisterCard: React.FC = () => {
           type="password"
           className="register-input"
           onChange={(e) => setConfirmPassword(e.target.value)}
-        ></Input>
+        />
 
         <Button
           type="primary"

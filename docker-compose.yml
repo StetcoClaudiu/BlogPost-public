@@ -9,30 +9,31 @@ services:
       POSTGRES_PASSWORD: admin
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
   backend:
     build:
-      context: .
-      dockerfile: backend/dockerfile
+      context: ./backend
+      dockerfile: dockerfile
     volumes:
-      - ./backend:/app
+      - ./backend:/backend
     ports:
       - "8000:8000"
     depends_on:
       - db
     environment:
-      - DB_NAME=interview
-      - DB_USER=postgres
-      - DB_PASSWORD=admin
-      - DB_HOST=db
-      - DB_PORT=5432
+      DB_NAME: interview
+      DB_USER: postgres
+      DB_PASSWORD: admin
+      DB_HOST: db
+      DB_PORT: 5432
 
   frontend:
     build:
-      context: .
-      dockerfile: frontend/dockerfile
-    volumes:
-      - ./frontend:/app
+      context: ./frontend
+      dockerfile: dockerfile
+
     ports:
       - "3000:3000"
     depends_on:
