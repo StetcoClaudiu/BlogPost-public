@@ -65,4 +65,9 @@ Delete: Notifies clients about the deletion of a blog post, including the ID of 
 
 Update: Sends updates for blog posts, including new or updated data.
 
-##Screenshots
+## Screenshots
+![Screenshot (47)](https://github.com/user-attachments/assets/60b269c0-a3d1-420c-a176-b35d4680f836)
+![Screenshot (48)](https://github.com/user-attachments/assets/e2375164-1cd3-4ab2-a834-f7b5dce400b1)
+![Screenshot (49)](https://github.com/user-attachments/assets/ee3e0625-8e34-463d-831f-e173f6bb8c49)
+![Screenshot (50)](https://github.com/user-attachments/assets/fc4fd7ed-8a64-464a-a62f-dfd453e06ff8)
+![Screenshot 2024-07-23 000243](https://github.com/user-attachments/assets/391c4112-610e-43f2-ba6b-6cdf3420bcf2)
