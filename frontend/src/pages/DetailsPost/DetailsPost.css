@@ -16,8 +16,9 @@
 }
 
 .content-details {
-  height: 80vh;
-  width: 100vw;
+  height: 70vh;
+  width: 90vw;
   padding: 5vmin;
   padding-top: 0vmin;
+  margin: 0;
 }

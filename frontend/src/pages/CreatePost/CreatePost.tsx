@@ -38,8 +38,11 @@ export default function CreatePost() {
     <div className="container-create-post">
       <div className="title-create-post">Create your post</div>
       <Input
+        showCount
         placeholder="Title"
+        maxLength={20}
         className="container-title-input"
+        value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <TextArea

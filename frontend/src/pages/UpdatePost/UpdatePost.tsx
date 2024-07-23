@@ -40,7 +40,7 @@ export default function UpdatePost() {
         `http://127.0.0.1:8000/blog_post_details/${parm.id}/`,
         data
       );
-      message.success("Post saved");
+      message.success("Post updated");
       navigate("/");
     } catch (error) {
       console.error(error);
@@ -51,11 +51,14 @@ export default function UpdatePost() {
     <div className="container-create-post">
       <div className="title-create-post">Update your post</div>
       <Input
+        showCount
         placeholder="Title"
+        maxLength={20}
         className="container-title-input"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
+
       <TextArea
         showCount
         maxLength={500}

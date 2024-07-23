@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { List, Skeleton } from "antd";
+import { List, message, Skeleton } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -34,6 +34,7 @@ const ListPost: React.FC = () => {
   const handleClickDelete = async (id: number) => {
     try {
       await axios.delete(`http://127.0.0.1:8000/blog_post_details/${id}/`);
+      message.success("Post deleted");
     } catch (error) {
       console.error("Error deleting blog post:", error);
     }
